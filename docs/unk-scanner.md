@@ -147,4 +147,4 @@ Load your own rules with `--rule ./my-rule.mjs`. The isolated process may read o
 
 ## Project
 
-The source, rules, tests and benchmark are in the [companion repository](https://github.com/KrasForge/unk-deaddrop-companion). The original code is MIT licensed, and Acorn retains its own license. Background on the campaign is in the [research series](https://krasforge.github.io/UNK_DeadDrop/) and the [preprint](https://doi.org/10.5281/zenodo.23652297).
+The source, rules, tests and benchmark are in the [companion repository](https://github.com/KrasForge/unk-scanner). The original code is MIT licensed, and Acorn retains its own license. Background on the campaign is in the [research series](https://krasforge.github.io/UNK_DeadDrop/) and the [preprint](https://doi.org/10.5281/zenodo.23652297).

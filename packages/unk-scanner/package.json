@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KrasForge/unk-deaddrop-companion.git",
+    "url": "git+https://github.com/KrasForge/unk-scanner.git",
     "directory": "packages/unk-scanner"
   },
   "homepage": "https://krasforge.github.io/UNK_DeadDrop/",

@@ -17,7 +17,7 @@ Arguments are files or directories; directories are searched for `.js`, `.mjs`, 
 
 | Option | Effect |
 | --- | --- |
-| `--format json\|sarif` | Output format; SARIF 2.1.0 for code scanning ([CI guide](https://github.com/KrasForge/unk-deaddrop-companion/blob/main/docs/ci.md)) |
+| `--format json\|sarif` | Output format; SARIF 2.1.0 for code scanning ([CI guide](https://github.com/KrasForge/unk-scanner/blob/main/docs/ci.md)) |
 | `--fail-on error\|warning\|note\|none` | Exit 1 when a finding reaches the level (default `none`) |
 | `--rule FILE` | Load an additional rule module (repeatable) |
 | `--timeout MS` / `--jobs N` | Per-file deadline (default 10,000) and analysis processes (default up to 4) |
@@ -28,7 +28,7 @@ Exit 0 means analysis completed, including when there are findings below `--fail
 
 ## Findings
 
-Each finding has `kind`, `severity`, `line`, `column` and `detail`. Rule-specific fields such as `indicators` and `evidence` may also appear. The rules, their severities and their escalation conditions are documented in [rules.md](https://github.com/KrasForge/unk-deaddrop-companion/blob/main/docs/rules.md). Severities were calibrated on 3,000 popular npm packages and Open VSX extensions, where no error-level finding occurred ([benchmark](https://github.com/KrasForge/unk-deaddrop-companion/blob/main/BENCHMARK.md)).
+Each finding has `kind`, `severity`, `line`, `column` and `detail`. Rule-specific fields such as `indicators` and `evidence` may also appear. The rules, their severities and their escalation conditions are documented in [rules.md](https://github.com/KrasForge/unk-scanner/blob/main/docs/rules.md). Severities were calibrated on 3,000 popular npm packages and Open VSX extensions, where no error-level finding occurred ([benchmark](https://github.com/KrasForge/unk-scanner/blob/main/BENCHMARK.md)).
 
 The report also contains:
 

@@ -3,7 +3,7 @@ import { relative, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const SECURITY_SEVERITY = { error: '8.0', warning: '5.0', note: '2.0' };
-const HELP = 'https://github.com/KrasForge/unk-deaddrop-companion/blob/main/docs/rules.md';
+const HELP = 'https://github.com/KrasForge/unk-scanner/blob/main/docs/rules.md';
 
 function uri(path, root) {
   const rel = relative(root, path);
@@ -70,7 +70,7 @@ export function toSarif(files, { rules, version, root = process.cwd(), isolation
           name: 'unk-scanner',
           version,
           semanticVersion: version,
-          informationUri: 'https://github.com/KrasForge/unk-deaddrop-companion',
+          informationUri: 'https://github.com/KrasForge/unk-scanner',
           rules: driverRules,
         },
       },

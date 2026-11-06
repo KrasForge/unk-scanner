@@ -21,7 +21,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://krasforge.github.io/UNK_DeadDrop/"
-Repository = "https://github.com/KrasForge/unk-deaddrop-companion"
+Repository = "https://github.com/KrasForge/unk-scanner"
 Research = "https://doi.org/10.5281/zenodo.23652297"
 
 [project.scripts]

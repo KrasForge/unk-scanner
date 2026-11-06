@@ -28,10 +28,10 @@ except ScannerError as error:
 
 Reports contain original SHA-256 hashes, byte counts, findings with severities and source locations, a `deobfuscation` summary, limitations and separate artifact identity records. With `--gzip`, `decoded` records the decompressed hash and size. `artifactMatches` can identify ordinary login code or a shared polyfill; these are context, not malware alerts.
 
-The scanner reports ClickFix clipboard command substitution, Electron `ELECTRON_RUN_AS_NODE` launches, obfuscator.io string arrays (recovering their strings without running the decoder), one linked AES-GCM loader pattern and campaign markers. See the [rule reference](https://github.com/KrasForge/unk-deaddrop-companion/blob/main/docs/rules.md). It does not prove execution or determine whether a file is safe.
+The scanner reports ClickFix clipboard command substitution, Electron `ELECTRON_RUN_AS_NODE` launches, obfuscator.io string arrays (recovering their strings without running the decoder), one linked AES-GCM loader pattern and campaign markers. See the [rule reference](https://github.com/KrasForge/unk-scanner/blob/main/docs/rules.md). It does not prove execution or determine whether a file is safe.
 
 Each file is parsed in a separate Node process under the permission model, with a capped heap, a per-file deadline and an empty environment. On Linux, where permitted, the process also gets a network namespace and rlimits. The Python wrapper applies an additional process timeout. Input and decompressed sizes are limited to 8 MiB and reports to 10,000 findings; limit failures return an error rather than a partial report. These controls are not a sandbox against an engine exploit. Output can contain input strings and should be handled accordingly.
 
 The CLI returns 0 for completed analysis, 1 when a finding reaches `--fail-on`, and 2 for errors. All npm CLI options, including `--format sarif`, are available. The Python API raises `ScannerError` when analysis fails.
 
-Original code is MIT licensed. Bundled Acorn includes its MIT license. No malware samples or active credentials are distributed. See the [companion repository](https://github.com/KrasForge/unk-deaddrop-companion) and [preprint](https://doi.org/10.5281/zenodo.23652297).
+Original code is MIT licensed. Bundled Acorn includes its MIT license. No malware samples or active credentials are distributed. See the [companion repository](https://github.com/KrasForge/unk-scanner) and [preprint](https://doi.org/10.5281/zenodo.23652297).
