@@ -138,6 +138,7 @@ Load your own rules with `--rule ./my-rule.mjs`. The isolated process may read o
 
 ## Limitations
 
+- **What it reads:** only `.js`, `.mjs`, `.cjs`, `.jsx`, `.ts`, `.mts`, `.cts` and `.tsx` files. Code that starts from configuration is out of scope: editor tasks, AI coding-agent hooks and rules, package lifecycle scripts and build files. So is code stored under a non-code file name, such as a font or image.
 - **Parsing:** JavaScript is parsed with Acorn. When Acorn rejects a file, `@babel/parser` parses it in AST-only mode as TypeScript and/or JSX (by file extension, otherwise tried in turn), and the report's `parser` field records which was used. Flow and other dialects are not supported.
 - **Evaluation:** no general data flow or reachability. A finding in a function that is never called is still reported.
 - **String arrays:** recovery covers obfuscator.io-style plain, base64 and RC4 arrays. Arrays reached through reassignable `var` aliases are reported as unresolved.
